@@ -62,7 +62,7 @@ bool xtlrig::CpuThread::isSoftAES(AlgoVariant av)
 
 xtlrig::CpuThread::cn_hash_fun xtlrig::CpuThread::fn(Algo algorithm, AlgoVariant av, Variant variant)
 {
-    assert(variant == VARIANT_0 || variant == VARIANT_1 || variant == VARIANT_IPBC || variant == VARIANT_XTL);
+    assert(variant == VARIANT_0 || variant == VARIANT_1 || variant == VARIANT_IPBC || variant == VARIANT_XTL || variant == VARIANT_FAST);
 
     static const cn_hash_fun func_table[90] = {
         cryptonight_single_hash<CRYPTONIGHT, false, VARIANT_0>,
@@ -99,6 +99,17 @@ xtlrig::CpuThread::cn_hash_fun xtlrig::CpuThread::fn(Algo algorithm, AlgoVariant
         cryptonight_triple_hash<CRYPTONIGHT, true,  VARIANT_XTL>,
         cryptonight_quad_hash<CRYPTONIGHT,   true,  VARIANT_XTL>,
         cryptonight_penta_hash<CRYPTONIGHT,  true,  VARIANT_XTL>,
+        
+        cryptonight_single_hash<CRYPTONIGHT, false, VARIANT_FAST>,
+        cryptonight_double_hash<CRYPTONIGHT, false, VARIANT_FAST>,
+        cryptonight_single_hash<CRYPTONIGHT, true,  VARIANT_FAST>,
+        cryptonight_double_hash<CRYPTONIGHT, true,  VARIANT_FAST>,
+        cryptonight_triple_hash<CRYPTONIGHT, false, VARIANT_FAST>,
+        cryptonight_quad_hash<CRYPTONIGHT,   false, VARIANT_FAST>,
+        cryptonight_penta_hash<CRYPTONIGHT,  false, VARIANT_FAST>,
+        cryptonight_triple_hash<CRYPTONIGHT, true,  VARIANT_FAST>,
+        cryptonight_quad_hash<CRYPTONIGHT,   true,  VARIANT_FAST>,
+        cryptonight_penta_hash<CRYPTONIGHT,  true,  VARIANT_FAST>,
 
 #       ifndef XMRIG_NO_AEON
         cryptonight_single_hash<CRYPTONIGHT_LITE, false, VARIANT_0>,
