@@ -23,16 +23,13 @@ fastrig is a high performance Electronero (ETNX) & Stellite (XTL) CPU miner, wit
 * Support for backup (failover) mining server.
 * keepalived support.
 * Command line options compatible with cpuminer.
-* Smart automatic [CPU configuration](https://github.com/xtlrig/xtlrig/wiki/Threads).
+* Smart automatic [CPU configuration](https://github.com/electronero/fastrig/wiki/Threads).
 * It's open source software.
 
 ## Download
-* Binary releases: https://github.com/xtlrig/xtlrig/releases
-* Git tree: https://github.com/xtlrig/xtlrig.git
-  * Clone with `git clone https://github.com/xtlrig/xtlrig.git`.
-
-## Usage
-Use [config.xtlrig.com](https://config.xtlrig.com/xtlrig) to generate, edit or share configurations.
+* Binary releases: https://github.com/electronero/fastrig/releases
+* Git tree: https://github.com/electronero/fastrig.git
+  * Clone with `git clone https://github.com/electronero/fastrig.git`.
 
 ### Options
 ```
