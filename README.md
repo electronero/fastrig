@@ -1,6 +1,6 @@
-# XTLRig
+# fastrig
 
-XTLRig is a high performance Stellite (XTL) CPU miner, with official support for Windows.
+fastrig is a high performance Electronero (ETNX) & Stellite (XTL) CPU miner, with official support for Windows.
 
 <img src="https://i.imgur.com/MIAgTEd.png" width="619" >
 
