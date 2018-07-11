@@ -172,6 +172,10 @@ xtlrig::Variant Job::variant() const
     if (m_algorithm.variant() == xtlrig::VARIANT_XTL && m_blob[0] < 4) {
         return xtlrig::VARIANT_1;
     }
+    
+    if (m_algorithm.variant() == xtlrig::VARIANT_FAST && m_blob[0] < 4) {
+        return xtlrig::VARIANT_1;
+    }
 
     if (m_algorithm.variant() == xtlrig::VARIANT_AUTO) {
         if (m_algorithm.algo() == xtlrig::CRYPTONIGHT) {
