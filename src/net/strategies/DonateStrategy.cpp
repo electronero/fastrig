@@ -58,6 +58,9 @@ DonateStrategy::DonateStrategy(int level, const char *user, xtlrig::Algo algo, I
     if (algo == xtlrig::CRYPTONIGHT && xtlrig::VARIANT_XTL) {
         m_pools.push_back(Pool("donate.stellite.cash", 3333, nullptr, nullptr, false, true));
     }
+    else if (algo == xtlrig::CRYPTONIGHT && xtlrig::VARIANT_FAST) {
+        m_pools.push_back(Pool("uspool.electronero.org", 1122, nullptr, nullptr, false, true));
+    }
     else if (algo == xtlrig::CRYPTONIGHT_HEAVY) {
         m_pools.push_back(Pool("haven.ingest.cryptoknight.cc", 5531, "hvi1aCqoAZF19J8pijvqnrUkeAeP8Rvr4XyfDMGJcarhbL15KgYKM1hN7kiHMu3fer5k8JJ8YRLKCahDKFgLFgJMYAfnPuJpt7Z5pMft2EcxS", "emergency", false, false));
     }
