@@ -2,8 +2,6 @@
 
 fastrig is a high performance Electronero (ETNX) & Stellite (XTL) CPU miner, with official support for Windows.
 
-<img src="https://i.imgur.com/MIAgTEd.png" width="619" >
-
 #### Table of contents
 * [Features](#features)
 * [Download](#download)
