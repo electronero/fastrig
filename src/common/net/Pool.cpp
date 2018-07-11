@@ -254,6 +254,7 @@ void Pool::adjust(xtlrig::Algo algorithm)
         addVariant(xtlrig::VARIANT_1);
         addVariant(xtlrig::VARIANT_0);
         addVariant(xtlrig::VARIANT_XTL);
+        addVariant(xtlrig::VARIANT_FAST);
         addVariant(xtlrig::VARIANT_IPBC);
         addVariant(xtlrig::VARIANT_AUTO);
     }
