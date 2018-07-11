@@ -63,6 +63,7 @@ enum Variant {
     VARIANT_1    = 1,  // CryptoNight variant 1 also known as Monero7 and CryptoNightV7
     VARIANT_IPBC = 2,  // CryptoNight Lite variant 1 with XOR (IPBC only)
     VARIANT_XTL  = 3   // CryptoNight variant 1 (Stellite only)
+    VARIANT_FAST  = 3  // CryptoNight variant 1 (Electronero)
 };
 
 
