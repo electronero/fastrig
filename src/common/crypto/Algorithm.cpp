@@ -57,6 +57,7 @@ static AlgoData const algorithms[] = {
     { "cryptonight/0",         "cn/0",         xtlrig::CRYPTONIGHT,       xtlrig::VARIANT_0    },
     { "cryptonight/1",         "cn/1",         xtlrig::CRYPTONIGHT,       xtlrig::VARIANT_1    },
     { "cryptonight/xtl",       "cn/xtl",       xtlrig::CRYPTONIGHT,       xtlrig::VARIANT_XTL  },
+    { "cryptonight/etnx",       "cn/etnx",     xtlrig::CRYPTONIGHT,       xtlrig::VARIANT_FAST  },
 
 #   ifndef XMRIG_NO_AEON
     { "cryptonight-lite",      "cn-lite",      xtlrig::CRYPTONIGHT_LITE,  xtlrig::VARIANT_AUTO },
@@ -76,6 +77,7 @@ static AlgoData const xmrStakAlgorithms[] = {
     { "cryptonight-monerov7",    nullptr, xtlrig::CRYPTONIGHT,      xtlrig::VARIANT_1    },
     { "cryptonight_v7",          nullptr, xtlrig::CRYPTONIGHT,      xtlrig::VARIANT_1    },
     { "cryptonight_v7_stellite", nullptr, xtlrig::CRYPTONIGHT,      xtlrig::VARIANT_XTL  },
+    { "cryptonight_v7_electronero", nullptr, xtlrig::CRYPTONIGHT,   xtlrig::VARIANT_FAST  },
     { "cryptonight_lite",        nullptr, xtlrig::CRYPTONIGHT_LITE, xtlrig::VARIANT_0    },
     { "cryptonight-aeonv7",      nullptr, xtlrig::CRYPTONIGHT_LITE, xtlrig::VARIANT_1    },
     { "cryptonight_lite_v7",     nullptr, xtlrig::CRYPTONIGHT_LITE, xtlrig::VARIANT_1    },
@@ -88,7 +90,8 @@ static const char *variants[] = {
     "0",
     "1",
     "ipbc",
-    "xtl"
+    "xtl",
+    "etnx"
 };
 
 
@@ -163,6 +166,9 @@ void xtlrig::Algorithm::parseVariant(const char *variant)
 void xtlrig::Algorithm::parseVariant(int variant)
 {
     if (variant >= VARIANT_AUTO && variant <= VARIANT_XTL) {
+       m_variant = static_cast<Variant>(variant);
+    }
+    else if (variant >= VARIANT_AUTO && variant <= VARIANT_FAST) {
        m_variant = static_cast<Variant>(variant);
     }
     else {
